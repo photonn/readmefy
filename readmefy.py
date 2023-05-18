@@ -63,7 +63,7 @@ def generate_readme(api_key: str, dir_path: str, code_files: List[str]):
             max_tokens=TOKEN_LIMIT
         )
 
-        with open(os.path.join(dir_path, 'README.MD'), 'w') as f:
+        with open(os.path.join(dir_path, 'README.md'), 'w') as f:
             f.write(response.choices[0].text.strip())
     except Exception as e:
         print(f"Failed to generate README for directory {dir_path}. Error: {str(e)}")

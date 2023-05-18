@@ -1,7 +1,6 @@
-# README.md
 ## Description
 
-This repository contains a Python script `readmefy.py` which is used to generate a `README.md` file by using the OpenAI API. It can parse code files for a given directory and generate a `README.md` file for it. Initially, the script only accepts Python files, but it can include other code files like JS, Java, C (both C and C++), C#, Go, Ruby, and PHP files.
+This repository contains a Python script `readmefy.py` which is used to generate a `README.md` file by using the OpenAI API. It can parse code files for current directory and subdirectories and generate a `README.md` file for it. The script accepts the following code files: JS, Java, C (both C and C++), C#, Go, Ruby, and PHP files.
 
 ## Prerequisites 
 
@@ -9,7 +8,7 @@ The `readmefy.py` script requires the following:
 
 - Python 3.5 or later 
 - OpenAI API key
-- TikTok Token library 
+- os, openai, typing from List, sys and tiktoken libraries
 
 ## Usage 
 
