@@ -5,7 +5,7 @@ import sys
 import tiktoken
 
 # List of code file extensions
-CODE_EXTENSIONS = ['.py', '.js', '.java', '.c', '.cpp', '.cs', '.go', '.rb', '.php']
+CODE_EXTENSIONS = ['.py', '.ipynb', '.r', '.cpp', '.c', '.h', '.java', '.js', '.ts', '.html', '.css', '.scss', '.less', '.php', '.go', '.swift', '.sh', '.bash', '.zsh', '.fish', '.ps1', '.psm1', '.bat', '.cmd', '.vbs', '.lua', '.pl', '.pm', '.tcl', '.rb', '.dart', '.kt', '.kts', '.groovy', '.scala', '.clj', '.cljs', '.cljc', '.coffee', '.elm', '.erl', '.hrl', '.ex', '.exs', '.ml', '.mli', '.mll', '.mly', '.nim', '.php3', '.php4', '.php5', '.php7', '.phps', '.phtml', '.pyc', '.pyx', '.pxd', '.pxi', '.rkt', '.rs', '.s', '.scm', '.ss', '.sml', '.sol', '.sql', '.t', '.tex', '.thy', '.v', '.vh', '.vhd', '.vim', '.vue', '.xml', '.xsd', '.xsl', '.yaml', '.yml', '.zshrc']
 TOKEN_LIMIT = 2000
 MODEL = "text-davinci-003"
 
