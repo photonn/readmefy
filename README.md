@@ -1,19 +1,23 @@
+# readmefy
+A simple repo to demonstrate the use of README.md file
+
 ## Description
+This repo contains a few Python files demonstrating simple operations along with an HTML file. The goal for this repo is to learn how to create a comprehensive README.md for any code repository.
 
-This repository contains a Python script `readmefy.py` which is used to generate a `README.md` file by using the OpenAI API. It can parse code files for current directory and subdirectories and generate a `README.md` file for it. The script accepts the following code files: JS, Java, C (both C and C++), C#, Go, Ruby, and PHP files.
+## Prerequisites
+Each project has different requirements that need to be installed in order to run the code. 
 
-## Prerequisites 
+#### Python version
+This repo is developed under Python 3.6+.
 
-The `readmefy.py` script requires the following: 
+#### Imports
+No special imports are necessary for files in this repo.
 
-- Python 3.5 or later 
-- OpenAI API key
-- os, openai, typing from List, sys and tiktoken libraries
+#### Keys
+No keys are necessary for files in this repo.
 
-## Usage 
+## Usage
+The Python files are intended to demonstrate simple operations such as addition, printing and function calls. The HTML file is intended to demonstrate basic formatting with HTML tags.
 
-Running the script is straightforward. To run it, you can execute the command `python readmefy.py <openai_api_key>` from the command line, where `<openai_api_key>` is your OpenAI API key. After executing the script, it will generate a `README.md` file for the directory it was executed in.
-
-## Limitations 
-
-Due to the API token limit of 2000 tokens, the generated `README.md` file may be limited to this number of tokens. If the input code file is too long, the script will skip the directory, since it cannot generate a valid `README.md` file for it.
+## Limitations
+The code in this repo is intended for demonstration only and should not be used for any real applications.
