@@ -1,4 +1,4 @@
-# Repository Name
+# READMEFY
 
 ## Description
 This repository contains a Python script designed to automate the generation of README.md files for code directories using the Azure OpenAI API. The script assesses all code files within a specified directory, dynamically constructs a detailed documentation prompt, and leverages OpenAI's API to generate a comprehensive README.md file.
