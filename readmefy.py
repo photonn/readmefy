@@ -3,13 +3,17 @@ import openai
 from typing import List
 import sys
 import tiktoken
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Configuration parameters
-AZURE_OPENAI_API_KEY = 'c4a3ad02c9794dee84f95327611f7492'
-API_BASE = 'https://aitest-10001.openai.azure.com/'
-API_VERSION = '2023-05-15'
-DEPLOYMENT_ID = 'gpt-4-turbo-2024-04-09'
-TOKEN_LIMIT = 128000
+AZURE_OPENAI_API_KEY = os.getenv('AZURE_OPENAI_API_KEY')
+API_BASE = os.getenv('API_BASE')
+API_VERSION = os.getenv('API_VERSION')
+DEPLOYMENT_ID = os.getenv('DEPLOYMENT_ID')
+TOKEN_LIMIT = int(os.getenv('TOKEN_LIMIT', 128000))
 
 # List of code file extensions
 CODE_EXTENSIONS = ['.py', '.ipynb', '.r', '.cpp', '.c', '.h', '.java', '.js', '.ts', '.html', '.css', '.scss', '.less', 

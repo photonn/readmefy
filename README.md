@@ -1,23 +1,44 @@
-# readmefy
-A simple repo to demonstrate the use of README.md file
+# Repository Name
 
 ## Description
-This repo contains a few Python files demonstrating simple operations along with an HTML file. The goal for this repo is to learn how to create a comprehensive README.md for any code repository.
+This repository contains a Python script designed to automate the generation of README.md files for code directories using the Azure OpenAI API. The script assesses all code files within a specified directory, dynamically constructs a detailed documentation prompt, and leverages OpenAI's API to generate a comprehensive README.md file.
 
 ## Prerequisites
-Each project has different requirements that need to be installed in order to run the code. 
+To effectively use this repository, the following prerequisites are required:
+- Python 3.8 or higher.
+- Access to Azure OpenAI services with a valid API key.
+- Installation of necessary Python packages like `openai`, `tiktoken`, and `python-dotenv`.
 
-#### Python version
-This repo is developed under Python 3.6+.
+## Structure
+The repository is structured into two main parts:
+- **Code Files:**  
+  - `readmefy.py`: The primary Python script which contains functions to identify code files, read their contents, construct the prompt, and interact with the Azure OpenAI API to generate the README.md file.
 
-#### Imports
-No special imports are necessary for files in this repo.
+- **Mock Directory:**  
+  - Contains a dummy HTML file (`main.py`) simulating a simple HTML webpage to demonstrate the script's capability to include various file types.
 
-#### Keys
-No keys are necessary for files in this repo.
+### Special Attention to Pipelines
+The script primarily operates as a single-stage pipeline:
+- **Trigger:** Initiated manually by running the script with a path argument on the command line.
+- **Main Phases:**
+  1. **File Scanning:** Identifying eligible code files based on predefined file extensions.
+  2. **Content Aggregation:** Reading and assembling contents of the identified files.
+  3. **Prompt Construction:** Formulating a complete documentation request from the aggregated content.
+  4. **OpenAI API Interaction:** Sending the prompt to OpenAI and retrieving the generated README.md content.
+  5. **File Creation:** Writing the received README.md content back to the specified directory.
 
 ## Usage
-The Python files are intended to demonstrate simple operations such as addition, printing and function calls. The HTML file is intended to demonstrate basic formatting with HTML tags.
+To generate a README for a directory:
+1. Configure your `.env` file with necessary API configurations such as `AZURE_OPENAI_API_KEY`, `API_BASE`, etc.
+2. Simply run the script as follows:
+   ```bash
+   python readmefy.py <PATH TO YOUR DIRECTORY>
+   ```
+   Replace `<PATH TO YOUR DIRECTORY>` with the path to the directory for which you want a README generated.
 
 ## Limitations
-The code in this repo is intended for demonstration only and should not be used for any real applications.
+- **Token Limit:** The script is configured to handle prompts up to 128,000 tokens, which limits the amount of content that can be processed in a single request.
+- **File Type Coverage:** While the script includes a comprehensive list of file extensions, unforeseen file types or files with no extensions might be ignored.
+- **Error Handling:** The system primarily prints error messages to the console and does not recover or retry upon failures. 
+
+This automated system simplifies the documentation process, ensuring consistent and detailed README files for varied software projects.
