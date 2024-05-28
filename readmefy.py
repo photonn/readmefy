@@ -95,7 +95,7 @@ def generate_readme(api_key: str, api_base: str, api_version: str, deployment_id
     print(f"Content:")
     print(response['choices'][0]['message']['content'])
 
-    print(f"Writing README for directory {dir_path}/README.md")
+    print(f"Writing README for directory {dir_path}/README.auto.md")
 
     try:
         with open(os.path.join(dir_path, 'README.md'), 'w') as f:
